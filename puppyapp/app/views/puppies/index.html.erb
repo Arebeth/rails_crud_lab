@@ -1,0 +1,12 @@
+<h1>Here are all of the puppies!</h1>
+
+<% @puppies.each do |puppy| %>
+  <h3>
+    <%= puppy.name %>, <%= puppy.age %>, <%= puppy.breed %>
+    <br>
+    <a href="/puppies/<%= puppy.id %>">Show me this puppy</a>
+    <br><br>
+  </h3>
+<% end %>
+
+<a href="/puppies/new">Add a puppy!</a>

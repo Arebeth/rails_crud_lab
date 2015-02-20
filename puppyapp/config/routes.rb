@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+ 
+root "puppies#index"
+
+  # VERB '/route', to: "controller#action"
+
+get '/puppies', to: "puppies#index"
+
+get '/puppies/new', to: "puppies#new" #page where the form is
+
+get '/puppies/:id', to: "puppies#show"
+
+get '/puppies/:id/edit', to: "puppies#edit"
+
+#on the form, these are the actions
+post '/puppies', to: "puppies#create" #will be triggered when you submit the form sent on the new page
+
+put '/puppies/:id', to: "puppies#update"
+
+delete '/puppies/:id', to: "puppies#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,17 @@
+<h1>Puppies#show</h1>
+
+<%= @puppy.name %> 
+<br>
+<%= @puppy.age %> 
+<br>
+<%= @puppy.breed %>
+<br>
+
+<a href="/puppies/<%= @puppy.id %>/edit">Edit</a> 
+<br>
+<a href="/puppies">See ALL the puppies</a>
+<br>
+
+
+<%= link_to "Delete", "/puppies/#{@puppy.id}", method: "delete" %>
+
